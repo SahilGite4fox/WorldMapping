@@ -1,0 +1,19 @@
+/* Custom Scrollbar */
+/* For WebKit Browsers (Chrome,Safari,Edge) */
+*::-webkit-scrollbar{width:10px;height:10px;}
+/* Remove Top and Bottom Scrollbar Buttons */
+*::-webkit-scrollbar-button{display:none;}
+/* Scrollbar Track */
+*::-webkit-scrollbar-track{background:#f1f1f1;border-radius:10px;}
+/* Scrollbar Thumb */
+*::-webkit-scrollbar-thumb{background-color:rgba(128,128,128,0.753);border-radius:10px;border:2px solid #f1f1f1;cursor:pointer;}
+/* Thumb Hover Effect */
+*::-webkit-scrollbar-thumb:hover{background-color:rgba(128,128,128,0.753);cursor:pointer;}
+.worldMapDiv{display:block;width:150vh;max-width:100%;margin:auto;}
+.country:hover{fill:tomato;}
+svg{position:relative;width:100%;height:auto;object-fit:contain;}
+.worldMapSec{background-image:url(../images/WhatsApp\ Image\ 2024-09-28\ at\ 02.16.20_21e313e0.jpg);background-size:100% 100%;background-repeat:no-repeat;display:flex;height:100vh;}
+.country{stroke-width:0.5;transition:fill 0.5s ease;position:relative;}
+.country:hover::after{content:attr(title);position:absolute;background-color:red;color:#fff;padding:5px;border-radius:3px;font-size:12px;white-space:nowrap;bottom:100%;left:50%;transform:translateX(-50%);opacity:1;pointer-events:none;transition:opacity 0.3s ease;}
+.country{--tooltip-opacity:0;}
+.tooltip{position:absolute;background-color:#333;color:#fff;padding:5px;border-radius:3px;pointer-events:none;display:none;font-size:12px;}
